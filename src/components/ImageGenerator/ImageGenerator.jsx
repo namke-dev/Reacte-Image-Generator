@@ -8,25 +8,27 @@ const ImageGenerator = () => {
   let inputRef = useRef(null);
   const [loading, setloading] = useState(false);
 
-  if (inputRef.current.value === "") {
-    return;
-  }
-  setloading(true);
   const imageGenerator = async () => {
-    let response = null;
-    inputRef && (response = await fetchImageFromApi(inputRef));
-    let data = await response.json();
-    let data_array = data.data;
-
-    if (data_array) {
-      console.log(data_array);
-      setImg_url(data_array[0].url);
-      setloading(false);
+    if (inputRef.current.value === "") {
       return;
-    } else {
-      alert("Error when calling API");
     }
-  };
+    setloading(true);
+
+    let response = null;
+    try {
+      inputRef && (response = await fetchImageFromApi(inputRef));
+      let data = await response.json();
+      let data_array = data.data;
+      if (data_array) {
+        console.log(data_array);
+        setImg_url(data_array[0].url);
+      }
+    } catch (error) {
+      console.error(error);
+      alert(error);
+    } finally {
+      setloading(false);
+    }
 
   return (
     <div className="ai-image-generator">
