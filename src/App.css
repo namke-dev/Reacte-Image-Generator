@@ -1,3 +1,36 @@
+body {
+  background-color: #1f2937; /* Dark mode background color */
+  color: rgba(255, 255, 255, 0.9); /* Dark mode text color with opacity */
+  position: relative;
+}
+
+/* Circle with blur effect at the top-right */
+body::before {
+  content: "";
+  position: absolute;
+  top: -6rem;
+  right: 11rem;
+  height: 31.25rem;
+  width: 31.25rem;
+  border-radius: 50%;
+  background-color: #946263; /* Dark mode circle color */
+  z-index: -10;
+  filter: blur(10rem);
+}
+
+/* Circle with blur effect at the top-left */
+body::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -35rem;
+  height: 31.25rem;
+  width: 50rem;
+  border-radius: 50%;
+  background-color: #575395; /* Dark mode circle color */
+  z-index: -10;
+  filter: blur(10rem);
+}
 .App {
   text-align: center;
 }
