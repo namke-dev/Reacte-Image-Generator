@@ -116,7 +116,6 @@
     margin-right: 4px;
     border: 2px solid hsl(0, 0%, 20%);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 800;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease; /* Smooth background and scale transition */
   }
@@ -148,3 +147,46 @@
     opacity: 0.3;
   }
   
+  .generate-btn > svg {
+    margin-left: 5px; 
+    font-size: 15px;
+    color: white;
+  }
+  /* Media query for small screens */
+@media screen and (max-width: 600px) {
+  .search-input,
+  .generate-btn,
+  .loading-bar-full {
+    width: calc(85% - 20px); /* Adjust width to leave some space on the sides */
+    margin-left: 10px; /* Center elements with margin */
+    margin-right: 10px;
+  }
+  
+  .image-loading img {
+    width: 85%; /* Use 100% width on small screens */
+  }
+
+  .search-box {
+    width: 95%;
+    height: 50px;
+  }
+
+  .generate-btn {
+    width: 110px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-right: 6px;
+  }
+
+  .search-input {
+    height: 30px;
+    font-size: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .generate-btn > svg {
+    font-size: 12px;
+  }
+}
