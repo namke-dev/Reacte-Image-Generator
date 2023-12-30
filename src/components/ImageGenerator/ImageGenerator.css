@@ -19,7 +19,7 @@
     align-items: center;
     margin-top: 40px;
     margin-bottom: 30px;
-    gap: 10px;
+    gap: 30px;
   }
   
   .header {
@@ -58,7 +58,6 @@
     border-radius: 10px;
     transition: transform 0.3s ease; /* Smooth scale transition */
     margin-top: 15px;
-    margin-bottom: 12px;
   }
   
   .image-loading img:hover {
