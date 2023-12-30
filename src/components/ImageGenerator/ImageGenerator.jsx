@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./ImageGenerator.css";
 import { fetchImageFromApi } from "../../lib/fetch-image-from-api";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function ImageGenerator() {
   const [img_url, setImg_url] = useState("/");
@@ -70,6 +71,7 @@ export default function ImageGenerator() {
           disabled={loading}
         >
           GO
+          <BsArrowRight />
         </button>
       </div>
     </div>
