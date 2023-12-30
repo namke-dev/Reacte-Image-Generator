@@ -54,9 +54,11 @@
   }
   
   .image-loading img {
-    width: 400px;
+    width: 420px;
     border-radius: 10px;
     transition: transform 0.3s ease; /* Smooth scale transition */
+    margin-top: 15px;
+    margin-bottom: 8px;
   }
   
   .image-loading img:hover {
@@ -155,25 +157,29 @@
   /* Media query for small screens */
 @media screen and (max-width: 600px) {
   .search-input,
-  .generate-btn,
-  .loading-bar-full {
+  .generate-btn {
     width: calc(85% - 20px); /* Adjust width to leave some space on the sides */
     margin-left: 10px; /* Center elements with margin */
     margin-right: 10px;
   }
   
+  .header {
+    font-size: 49px;
+    font-weight: 500;
+
+  }
   .image-loading img {
     width: 85%; /* Use 100% width on small screens */
   }
 
   .search-box {
     width: 95%;
-    height: 50px;
+    height: 60px;
   }
 
   .generate-btn {
     width: 110px;
-    height: 40px;
+    height: 50px;
     font-size: 18px;
     margin-top: 0px;
     margin-right: 6px;
@@ -181,10 +187,16 @@
 
   .search-input {
     height: 30px;
-    font-size: 13px;
+    font-size: 14px;
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .loading-bar-full {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: calc(85% - 80px);
+  }  
 
   .generate-btn > svg {
     font-size: 12px;
